@@ -55,7 +55,7 @@
             </div>
             <div class="sticky-nav-options-div">
                 <button class="badge nav-item">Explore Premium</button>
-                <button class="badge nav-item dark-badge"><i class="fa-regular fa-circle-down" style="margin-right: 5px;"></i>Install App</button>
+                <button class="badge nav-item dark-badge js-install-app"><i class="fa-regular fa-circle-down" style="margin-right: 5px;"></i>Install App</button>
                 <i class="fa-regular fa-user"></i>
             </div>
         </div>
@@ -131,5 +131,15 @@
         <div class="controls"></div>
     </div>
 </div>
+
+<script>
+    const installButton = document.querySelector('.js-install-app');
+    installButton.addEventListener('click',() => {
+        installButton.innerHTML = 'Installing';
+        setTimeout(() => {
+            installButton.innerHTML = 'Go to App';
+        },2000); 
+    });
+</script>
 </body>
 </html>
